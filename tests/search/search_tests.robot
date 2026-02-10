@@ -1,10 +1,18 @@
 *** Settings ***
-Documentation     Template for Search tests
+Documentation     Car Search automation test
 Resource          ../../resources/keywords.robot
-Resource          ../../resources/locators.robot
+
 
 *** Test Cases ***
-Search Test Template
-    [Documentation]    Placeholder for search test
+Verify Car Search Functionality With Valid Inputs
+    [Documentation]    Verify user can search cars using valid pickup and drop details
     [Tags]    search
-    Log    Implement search test here
+
+    Open Browser    https://morent-car.archisacademy.com/    chrome
+    Maximize Browser Window
+
+    Search Car With Valid Inputs
+
+    Verify Search Results Loaded
+
+    Close Browser Session

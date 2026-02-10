@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.2 on win32)" generated="2026-02-10T15:27:31.215755" rpa="false" schemaversion="5">
+<suite id="s1" name="Search Tests" source="C:\Users\prade\sgbi-inc-sastra-global-business-innovations-test-engineer-automation-ai-systems-team-4\tests\search\search_tests.robot">
+<test id="s1-t1" name="Verify Car Search Functionality With Valid Inputs" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:31.892827" level="INFO">Opening browser 'chrome' to base url 'https://morent-car.archisacademy.com/'.</msg>
+<arg>https://morent-car.archisacademy.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-10T15:27:31.892827" elapsed="2.345601"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-10T15:27:34.265206" elapsed="0.186171"/>
+</kw>
+<kw name="Search Car With Valid Inputs" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PICKUP_CITY_DROPDOWN}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:34.503592" elapsed="1.491022"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-10T15:27:40.995897" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-10T15:27:35.994614" elapsed="5.001283"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:40.995897" level="INFO">Clicking element '(//span[@title='Select you City'][normalize-space()='Select you City'])[1]'.</msg>
+<arg>${PICKUP_CITY_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:40.995897" elapsed="0.228299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PALAKKAD_OPTION}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:41.224196" elapsed="0.107407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:41.331603" level="INFO">Clicking element '//div[contains(text(),'Palakkad')]'.</msg>
+<arg>${PALAKKAD_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:41.331603" elapsed="0.264728"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:41.599569" level="INFO">Clicking element '(//input[@placeholder='Select date'])[1]'.</msg>
+<arg>${PICKUP_DATE_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:41.596331" elapsed="0.223660"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:41.830084" level="INFO">Clicking element '(//a[@class='ant-picker-now-btn'][normalize-space()='Today'])[1]'.</msg>
+<arg>${TODAY_PICKUP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:41.824037" elapsed="0.217991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:42.042028" level="INFO">Clicking element '(//input[@placeholder='Select time'])[1]'.</msg>
+<arg>${PICKUP_TIME_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:42.042028" elapsed="0.177431"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:42.219459" level="INFO">Clicking element '(//a[@class='ant-picker-now-btn'][normalize-space()='Now'])[1]'.</msg>
+<arg>${NOW_PICKUP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:42.219459" elapsed="0.187028"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-10T15:27:44.407744" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-10T15:27:42.406487" elapsed="2.001257"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DROPOFF_CITY_DROPDOWN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:44.407744" elapsed="0.036744"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-10T15:27:49.445011" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-10T15:27:44.444488" elapsed="5.000523"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:49.445011" level="INFO">Clicking element '//body[1]/div[1]/main[1]/section[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/span[1]/span[2]'.</msg>
+<arg>${DROPOFF_CITY_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:49.445011" elapsed="0.255173"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${THRISSUR_OPTION}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:49.706077" elapsed="0.369848"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:50.075925" level="INFO">Clicking element '(//div[@class='ant-select-item-option-content'][normalize-space()='Thrissur'])[2]'.</msg>
+<arg>${THRISSUR_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:50.075925" elapsed="0.327766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:50.407801" level="INFO">Clicking element '(//input[@placeholder='Select date'])[2]'.</msg>
+<arg>${DROPOFF_DATE_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:50.403691" elapsed="0.369114"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:50.772805" level="INFO">Clicking element '(//a[@class='ant-picker-now-btn'][normalize-space()='Today'])[2]'.</msg>
+<arg>${TODAY_DROPOFF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:50.772805" elapsed="0.383436"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:51.158251" level="INFO">Clicking element '(//input[@placeholder='Select time'])[2]'.</msg>
+<arg>${DROPOFF_TIME_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:51.158251" elapsed="0.347624"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:51.507887" level="INFO">Clicking element '(//a[@class='ant-picker-now-btn'][normalize-space()='Now'])[2]'.</msg>
+<arg>${NOW_DROPOFF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:51.507887" elapsed="0.475901"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:51.985801" level="INFO">Clicking element '//span[normalize-space()='Search']'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T15:27:51.983788" elapsed="0.466202"/>
+</kw>
+<status status="PASS" start="2026-02-10T15:27:34.477502" elapsed="17.972488"/>
+</kw>
+<kw name="Verify Search Results Loaded" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h3[normalize-space()='Koenigsegg']</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-10T15:27:52.464680" elapsed="1.165634"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:53.677982" level="INFO">Element 'xpath=//h3[normalize-space()='Koenigsegg']' is displayed.</msg>
+<arg>xpath=//h3[normalize-space()='Koenigsegg']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:53.630314" elapsed="0.047668"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:53.715031" level="INFO">Element 'xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//img' is displayed.</msg>
+<arg>xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//img</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:53.677982" elapsed="0.037049"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-10T15:27:53.754199" level="INFO">Element 'xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//button' is displayed.</msg>
+<arg>xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T15:27:53.715031" elapsed="0.042331"/>
+</kw>
+<status status="PASS" start="2026-02-10T15:27:52.462666" elapsed="1.294696"/>
+</kw>
+<kw name="Close Browser Session" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-10T15:27:53.759374" elapsed="2.893893"/>
+</kw>
+<status status="PASS" start="2026-02-10T15:27:53.759374" elapsed="2.893893"/>
+</kw>
+<doc>Verify user can search cars using valid pickup and drop details</doc>
+<tag>search</tag>
+<status status="PASS" start="2026-02-10T15:27:31.892827" elapsed="24.762455"/>
+</test>
+<doc>Car Search automation test</doc>
+<status status="PASS" start="2026-02-10T15:27:31.235230" elapsed="25.420052"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">search</stat>
+</tag>
+<suite>
+<stat name="Search Tests" id="s1" pass="1" fail="0" skip="0">Search Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

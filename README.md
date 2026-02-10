@@ -27,3 +27,4 @@ This is a clean template for a Robot Framework project with Python extensions.
    ```bash
    robot --outputdir results tests/
    ```
+robot --outputdir results tests/search/search_tests.robot 
