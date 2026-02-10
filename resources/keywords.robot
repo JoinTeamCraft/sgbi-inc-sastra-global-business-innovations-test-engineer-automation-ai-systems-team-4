@@ -4,12 +4,10 @@ Library           SeleniumLibrary
 Resource          locators.robot
 
 *** Keywords ***
-<<<<<<< Updated upstream
 # Add your common keywords here
 Example Keyword
     [Documentation]    Placeholder for a keyword
     No Operation
-=======
 
 Launch MoRent Website
     Open Browser    https://morent-car.archisacademy.com/    chrome
@@ -58,4 +56,3 @@ Verify Search Results Loaded
 
 Close Browser Session
     Close Browser
->>>>>>> Stashed changes
