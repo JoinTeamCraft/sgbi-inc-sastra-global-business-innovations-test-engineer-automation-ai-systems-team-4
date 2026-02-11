@@ -4,16 +4,15 @@ Library           SeleniumLibrary
 Resource          locators.robot
 
 *** Keywords ***
-# Add your common keywords here
-Example Keyword
-    [Documentation]    Placeholder for a keyword
-    No Operation
+
 
 Launch MoRent Website
+    [Documentation]    Open MoRent website and wait until home page loads
     Open Browser    https://morent-car.archisacademy.com/    chrome
     Maximize Browser Window
 
 Search Car With Valid Inputs
+    [Documentation]    Search cars using valid pickup, drop location, date and time
     Wait Until Element Is Visible    ${PICKUP_CITY_DROPDOWN}    10s
     Sleep  2s
     Click Element    ${PICKUP_CITY_DROPDOWN}
@@ -43,6 +42,8 @@ Search Car With Valid Inputs
     Click Element    ${SEARCH_BUTTON}
     
 Verify Search Results Loaded
+    [Documentation]    Verify that search results page loads and cars are displayed
+    
     Wait Until Page Contains Element    xpath=//h3[normalize-space()='Koenigsegg']    15s
     
     # Verify car name
@@ -55,4 +56,5 @@ Verify Search Results Loaded
     Element Should Be Visible           xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//button
 
 Close Browser Session
+    [Documentation]    Close browser after execution
     Close Browser
