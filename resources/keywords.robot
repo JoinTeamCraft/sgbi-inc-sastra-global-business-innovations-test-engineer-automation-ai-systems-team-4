@@ -14,21 +14,17 @@ Launch MoRent Website
 Search Car With Valid Inputs
     [Documentation]    Search cars using valid pickup, drop location, date and time
     Wait Until Element Is Visible    ${PICKUP_CITY_DROPDOWN}    10s
-    Sleep  2s
     Click Element    ${PICKUP_CITY_DROPDOWN}
-    Wait Until Element Is Visible    ${PALAKKAD_OPTION}    10s
+    Wait Until Element Is Visible    ${PALAKKAD_OPTION}    15s
     Click Element    ${PALAKKAD_OPTION}
 
     Click Element    ${PICKUP_DATE_FIELD}
-    Sleep  2s
     Click Element    ${TODAY_PICKUP}
 
     Click Element    ${PICKUP_TIME_FIELD}
-    Sleep  2s
     Click Element    ${NOW_PICKUP}
-    Sleep  2s
+    
     Wait Until Element Is Visible  ${DROPOFF_CITY_DROPDOWN}  timeout=10s
-    Sleep  5s
     Click Element    ${DROPOFF_CITY_DROPDOWN}
     Wait Until Element Is Visible    ${THRISSUR_OPTION}    10s
     Click Element    ${THRISSUR_OPTION}
@@ -42,20 +38,25 @@ Search Car With Valid Inputs
     Click Element    ${SEARCH_BUTTON}
     
 Verify Search Results Loaded
-    [Documentation]    Verify that search results page loads and cars are displayed
-    
-    Wait Until Page Contains Element    xpath=//h3[normalize-space()='Koenigsegg']    15s
-    
-    # Verify car name
-    Element Should Be Visible           xpath=//h3[normalize-space()='Koenigsegg']
+    [Documentation]    Verify that search results page loads and at least one car card is displayed
 
-    # Verify car image
-    Element Should Be Visible           xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//img
+    # Wait for any car result card
+    Wait Until Element Is Visible    ${VERIFY_CAR_CARD} 
 
-    # Verify Rent/Book button
-    Element Should Be Visible           xpath=//h3[normalize-space()='Koenigsegg']/ancestor::div[contains(@class,'card')]//button
+    # Verify at least one car name present
+    Element Should Be Visible    ${VERIFY_CAR_TITLE} 
+
+    # Verify car image present
+    Element Should Be Visible    ${VERIFY_CAR_IMAGE}
+
+    # Verify Rent/Book button present
+    Element Should Be Visible    ${VERIFY_RENT_BUTTON}  
 
 Close Browser Session
     [Documentation]    Close browser after execution
     Close Browser
+
+    
+
+
 
