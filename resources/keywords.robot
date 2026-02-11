@@ -58,3 +58,4 @@ Verify Search Results Loaded
 Close Browser Session
     [Documentation]    Close browser after execution
     Close Browser
+
