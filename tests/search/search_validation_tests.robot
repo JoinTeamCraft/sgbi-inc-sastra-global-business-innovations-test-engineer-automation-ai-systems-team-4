@@ -35,5 +35,7 @@ Search With Dates But No Locations
     Wait Until Page Contains  No Cars Found  10s
     Page Should Contain  text=No Cars Found
 
+    
+
 
 

@@ -36,3 +36,6 @@ ${VERIFY_RENT_BUTTON}       //button[.//span[text()='Rent Now']]
 
 #Alert
 ${VALID_ALERT}             //div[@role='alert']
+
+
+
