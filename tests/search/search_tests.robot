@@ -3,7 +3,7 @@ Documentation     Template for Search tests
 Resource          ../../resources/keywords.robot
 
 
-Suite Setup    Launch MoRent Website
+Test Setup    Launch MoRent Website
 Suite Teardown   Close Browser Session
 *** Test Cases ***
 Search Test Template
