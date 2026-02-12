@@ -27,10 +27,12 @@ ${NOW_DROPOFF}              (//a[@class='ant-picker-now-btn'][normalize-space()=
 # Search
 ${SEARCH_BUTTON}            //span[normalize-space()='Search']
 
+
 # Verify Search 
 ${VERIFY_CAR_IMAGE}         (//img[contains(@class,'product-card-image')])[1]
 ${VERIFY_CAR_CARD}          //div[contains(@class,'_product-card_')]
 ${VERIFY_CAR_TITLE}         //h3[contains(@class,'_product-card-header-title_')]
 ${VERIFY_RENT_BUTTON}       //button[.//span[text()='Rent Now']]
 
-
+#Alert
+${VALID_ALERT}             //div[@role='alert']

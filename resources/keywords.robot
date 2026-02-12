@@ -54,9 +54,61 @@ Verify Search Results Loaded
 
 Close Browser Session
     [Documentation]    Close browser after execution
-    Close Browser
+    Close All Browsers
 
-    
+Click Search Button
+    Wait Until Element Is Visible    ${SEARCH_BUTTON}    10s
+    Click Element    ${SEARCH_BUTTON}
+    Sleep  2s
+
+Verify Validation Message Displayed
+    [Documentation]    Verify red validation alert is displayed for missing inputs
+    [Arguments]    ${expected_text}
+    Wait Until Element Is Visible  ${VALID_ALERT}  10S
+    Element Should Be Visible        ${VALID_ALERT}
+    Element Should Contain  ${VALID_ALERT}  ${expected_text}
+    Page Should Not Contain  ${VERIFY_CAR_CARD}
+
+Verify User Stays On Home Page
+    [Documentation]    Verify the user location is on home page
+    Location Should Be   https://morent-car.archisacademy.com/ 
+
+Select Pickup Location Only
+    [Documentation]    Verify the partially filled pickup location
+    Wait Until Element Is Visible  ${PICKUP_CITY_DROPDOWN}  10s
+    Sleep  3s
+    Click Element    ${PICKUP_CITY_DROPDOWN}
+    Wait Until Element Is Visible  ${PALAKKAD_OPTION}  10s
+    Click Element    ${PALAKKAD_OPTION}
+
+Select Pickup And Drop Locations
+    [Documentation]    Verify the partially filled pickup and drop location
+    Wait Until Element Is Visible  ${PICKUP_CITY_DROPDOWN}  10s
+    Sleep  3s
+    Click Element    ${PICKUP_CITY_DROPDOWN}
+    Wait Until Element Is Visible  ${PALAKKAD_OPTION}  10s
+    Click Element    ${PALAKKAD_OPTION}
+    Wait Until Element Is Visible  ${DROPOFF_CITY_DROPDOWN}  10s
+    Sleep  3s
+    Click Element    ${DROPOFF_CITY_DROPDOWN}
+    Wait Until Element Is Visible  ${THRISSUR_OPTION}  10s
+    Click Element    ${THRISSUR_OPTION}
+
+Select Dates Only
+    [Documentation]    Search With partially filled pickup and dropoff Date
+    Wait Until Element Is Visible  ${PICKUP_DATE_FIELD}  10s
+    Sleep  2s
+    Click Element    ${PICKUP_DATE_FIELD}
+    Wait Until Element Is Visible  ${TODAY_PICKUP}  10s
+    Sleep  2s
+    Click Element    ${TODAY_PICKUP}
+    Wait Until Element Is Visible  ${DROPOFF_DATE_FIELD}  10s
+    Sleep  2s
+    Click Element    ${DROPOFF_DATE_FIELD}
+    Wait Until Element Is Visible  ${TODAY_DROPOFF}  10s
+    Sleep  2s
+    Click Element    ${TODAY_DROPOFF}
+
 
 
 
